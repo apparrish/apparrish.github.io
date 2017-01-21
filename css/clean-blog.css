@@ -399,6 +399,4 @@ body {
   -webkit-tap-highlight-color: #0085A1;
 }
 
-.dropdown-option {
-  color: #000000;
-}
+.navbar-nav > li > .dropdown-menu {     background-color: #454545;  }
