@@ -422,3 +422,7 @@ video{
   z-index: -1;
   width:100%;
 }
+
+#home-nav-li{
+  color: #777777;
+}
