@@ -400,3 +400,25 @@ body {
 }
 
 .navbar-nav > li > .dropdown-menu {     background-color: #4f5359;  }
+
+.header-container {
+  width:100%;
+  border-left: none;
+  border-right: none;
+  position:relative;
+}
+
+.video-container{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+video{
+  position: absolute;
+  z-index: -1;
+  width:100%;
+}
