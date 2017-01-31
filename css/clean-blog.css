@@ -399,7 +399,9 @@ body {
   -webkit-tap-highlight-color: #0085A1;
 }
 
-.navbar-nav > li > .dropdown-menu {     background-color: #4f5359;  }
+.navbar-nav > li > .dropdown-menu {
+  background-color: #4f5359;
+}
 
 .header-container {
   width:100%;
@@ -425,4 +427,10 @@ video{
 
 .home-nav-li{
   color: gray;
+}
+
+@media screen and (max-width:768px) {
+  .navbar-nav > li > .dropdown-toggle {
+    text-align: left;
+  }
 }
