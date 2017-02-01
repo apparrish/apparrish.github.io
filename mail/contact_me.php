@@ -7,7 +7,7 @@ if(empty($_POST['name'])      ||
    !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
    {
    echo "No arguments Provided!";
-   mail("austen.p.parrish@gmail.com", "johannaobenda.com error log",strip_tags(htmlspecialchars($_POST['name'])) + strip_tags(htmlspecialchars($_POST['email'])) + strip_tags(htmlspecialchars($_POST['phone'])) + strip_tags(htmlspecialchars($_POST['message'])), "From: noreply@johannaobenda.com\n"); 
+   mail("austen.p.parrish@gmail.com", "Error test", "This is a test.","From:noreply@johannaobenda.com"); 
    return false;
    }
    
