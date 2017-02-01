@@ -1,4 +1,4 @@
-# [Johanna Obenda](http://www.johanaobenda.com/)
+# [Johanna Obenda](http://www.johannaobenda.com/)
 
 This is Johanna Obenda's personal, professional website.
 
