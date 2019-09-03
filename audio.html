@@ -22,6 +22,10 @@
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
+    <!-- Paper Audio Player -->
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="import" href="bower_components/paper-audio-player/paper-audio-player.html">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -63,6 +67,7 @@
                             <li> <a class = "dropdown-option" href="audio.html">Audio</a></li>
                             <li> <a class = "dropdown-option" href="research.html">Research</a></li>
                             <li> <a class = "dropdown-option" href="writing.html">Writing</a></li>
+                            <li> <a class = "dropdown-option" href="museum.html">Museum</a></li>
                         </ul>
                     </li>
                     <li>
@@ -77,7 +82,7 @@
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url('img/mbu-likolo-6.jpeg')">
+    <header class="intro-header" style="background-image: url('img/braid.jpg')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -93,21 +98,38 @@
 
     <!-- Main Content -->
     <div class="container-fluid">
-        <p><i>Rice, 2018</i></p>
-        <p>A short story about rice and its history.</p>
-        <div>
-            <audio controls>
-                <source src="Rice.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
+
+        <div class="row">
+            <div class="col-lg-12"
+                <p>
+                    <b><i>Working Out Loud, 2019</i></b>
+                    <br>
+                    Designed and led <i>Working Out Loud</i>, an audio storytelling workshop for Brown University undergraduate students interested in producing high quality, ethical audio stories. <i>Working Out Loud</i>, in partnership with the <a href="https://www.brown.edu/initiatives/slavery-and-justice/cssj-intensive-audio-story-workshop">CSSJ</a> and <a href="http://www.nowherethis.org/">Now Here This</a>, aims to deconstruct certain preconceived notions about podcasting and pull back the curtain on audio storytelling. Drawing from personal and collective narratives, students learned to use audio production and storytelling as a tool for examining themes of race, freedoms, and injustices of the past and present.
+                </p>
+                <p><b>See flyer <a href="img/workingoutloud.png" target="_blank">here</a></b></p>
+            </div>
         </div>
-        <p><i>Untitled (Cracked Watermelon), 2018</i></p>
-        <p>A short story about watermelon and its history.</p>
-        <div>
-            <audio controls>
-                <source src="watermelon.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
+        <hr>
+        <div class="row">
+            <div class="col-lg-12"
+                <p>
+                    <b><i>Transatlantic Rice, 2018</i></b>
+                    <br>
+                    A short story about rice and its history.
+                </p>
+                <paper-audio-player src="Rice.mp3" title="Transatlantic Rice" color="#c9b069"></paper-audio-player>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-lg-12">
+                <p>
+                    <b><i>Untitled (Cracked Watermelon), 2018</i></b>
+                    <br>
+                    A short story about watermelon and race through the lens of still life painter Charles Ethan Porter.
+                </p>
+                <paper-audio-player src="watermelon.mp3" title="Untitled (Cracked Watermelon)" color="#35852a"></paper-audio-player>
+            </div>
         </div>
     </div>
 
@@ -118,7 +140,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <p class="copyright text-muted">Copyright &copy; Johanna Obenda 2016</p>
+                    <p class="copyright text-muted">Copyright &copy; Johanna Obenda 2019</p>
                     <p class="copyright text-muted">Developed by Austen Parrish</p>
                 </div>
             </div>
