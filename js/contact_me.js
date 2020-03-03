@@ -18,29 +18,41 @@ $(function() {
             if (firstName.indexOf(' ') >= 0) {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
-            $.ajax({
-                url: "//www.formspree.io/johannaobenda@gmail.com",
-                method: "POST",
-                data: {
-                    name: name,
-                    email: email,
-                    message: message
-                },
-                datatype: "json",
-                complete: function() {
-                    // Success message
-                    $('#success').html("<div class='alert alert-success'>");
-                    $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-                        .append("</button>");
-                    $('#success > .alert-success')
-                        .append("<strong>Your message has been sent. </strong>");
-                    $('#success > .alert-success')
-                        .append('</div>');
 
-                    //clear all fields
-                    $('#contactForm').trigger("reset");
-                },
-            });
+            if (grecaptcha.getResponse().length > 0) {
+                $.ajax({
+                    url: "//www.formspree.io/austen.p.parrish@gmail.com",
+                    method: "POST",
+                    data: {
+                        name: name,
+                        email: email,
+                        message: message
+                    },
+                    datatype: "json",
+                    complete: function() {
+                        // Success message
+                        $('#success').html("<div class='alert alert-success'>");
+                        $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                            .append("</button>");
+                        $('#success > .alert-success')
+                            .append("<strong>Your message has been sent. </strong>");
+                        $('#success > .alert-success')
+                            .append('</div>');
+
+                        //clear all fields
+                        $('#contactForm').trigger("reset");
+                    },
+                });
+            } else {
+                // Error message
+                $('#success').html("<div class='alert alert-warning'>");
+                $('#success > .alert-warning').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                    .append("</button>");
+                $('#success > .alert-warning')
+                    .append("<strong>Please check reCAPTCHA</strong>");
+                $('#success > .alert-warning')
+                    .append('</div>');
+            }
         },
         filter: function() {
             return $(this).is(":visible");
