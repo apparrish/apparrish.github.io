@@ -21,7 +21,7 @@ $(function() {
 
             if (grecaptcha.getResponse().length > 0) {
                 $.ajax({
-                    url: "//www.formspree.io/austen.p.parrish@gmail.com",
+                    url: "//formspree.io/johannaobenda@gmail.com",
                     method: "POST",
                     data: {
                         name: name,
